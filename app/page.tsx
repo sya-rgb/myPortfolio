@@ -72,7 +72,8 @@ export default function Portfolio() {
             <img 
               src="beh ngeri.png" 
               alt="Syamim Front" 
-              className="opacity-60 contrast-125 group-hover:opacity-100 group-hover:contrast-100 transition-all"
+              className="absolute inset-0 w-full h-full object-cover brightness-50 sepia(100%) hue-rotate(190deg) saturate-200 group-hover:brightness-100 group-hover:sepia-0 
+              group-hover:hue-rotate-0 group-hover:saturate-100 transition-all duration-700 ease-in-out"
             />
             {/* --- FRONT IMAGE END --- */}
           </div>
@@ -221,12 +222,7 @@ export default function Portfolio() {
         <ShieldCheck size={40} />
       </div>
       
-      <h4 className="font-bold text-2xl mb-4 group-hover:text-blue-400 transition-colors">Product Authenticity Protocol</h4>
-      
-      {/* Description and Timeline (Full-width and Centered) */}
-      <p className="text-gray-400 text-sm mb-8 leading-relaxed max-w-2xl">
-        A cryptographic hash-linked database system designed to prevent supply chain fraud through immutable digital verification.
-      </p>
+      <h4 className="font-bold text-2xl mb-4 group-hover:text-blue-400 transition-colors">Notable Developed Systems</h4>
       
       {/* New: Structured Project Timelines */}
       <div className="w-full text-left space-y-4 mb-8 text-xs font-mono text-gray-500 max-w-2xl border-t border-white/5 pt-6">
@@ -243,10 +239,6 @@ export default function Portfolio() {
           <p>Timeframe: Internship (With fellow interns)</p>
         </div>
       </div>
-
-      <button className="flex items-center gap-3 text-xs font-mono tracking-widest text-blue-400 uppercase group-hover:gap-6 transition-all">
-        Access Data <ChevronRight size={14} />
-      </button>
     </div>
   </div>
 </section>
