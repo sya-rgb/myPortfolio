@@ -163,19 +163,28 @@ export default function Portfolio() {
       <section id="journey" className="relative py-20 px-6 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
           
-          <div className="group relative bg-white/[0.02] border border-white/5 p-8 rounded-2xl transition-all hover:bg-blue-500/[0.05] hover:border-blue-500/30">
-            <GraduationCap className="text-blue-400 mb-6 group-hover:scale-110 transition-transform" />
-            <h4 className="font-mono text-xs text-blue-500 mb-2 tracking-widest uppercase">Education Level</h4>
-            <p className="text-sm text-gray-400 leading-relaxed">UiTM Shah Alam ( 2024 - Present )</p>
-            <p className="text-sm text-gray-400 leading-relaxed">UiTM Machang ( 2021 - 2023 )</p>
-          </div>
+{/* Example for the Education Card */}
+<div className="group relative bg-white/[0.02] border border-white/5 p-8 rounded-2xl transition-all hover:bg-blue-500/[0.05] hover:border-blue-500/30 flex flex-col items-center text-center">
+  <GraduationCap className="text-blue-400 mb-6 group-hover:scale-110 transition-transform" />
+  
+  <h4 className="font-mono text-xs text-blue-500 mb-4 tracking-widest uppercase">EDUCATION LEVEL</h4>
+  
+  <div className="space-y-2 w-full">
+    <p className="text-sm text-gray-300">UiTM Shah Alam ( 2024 - Present )</p>
+    <p className="text-sm text-gray-300">UiTM Machang ( 2021 - 2023 )</p>
+  </div>
+</div>
 
-          <div className="group relative bg-white/[0.02] border border-white/5 p-8 rounded-2xl transition-all hover:bg-indigo-500/[0.05] hover:border-indigo-500/30">
-            <Briefcase className="text-indigo-400 mb-6 group-hover:scale-110 transition-transform" />
-            <h4 className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">Language</h4>
-            <p className="text-sm text-gray-400 leading-relaxed">Malay - Native speaker.</p>
-            <p className="text-sm text-gray-400 leading-relaxed">English - Intermediate.</p>
-            <p className="text-sm text-gray-400 leading-relaxed">Japanese - Beginner.</p>
+{/* Example for the Language Card */}
+          <div className="group relative bg-white/[0.02] border border-white/5 p-8 rounded-2xl transition-all hover:bg-indigo-500/[0.05] hover:border-indigo-500/30 flex flex-col items-center text-center">
+          <Briefcase className="text-indigo-400 mb-6 group-hover:scale-110 transition-transform" /> 
+          <h4 className="font-mono text-xs text-indigo-500 mb-4 tracking-widest uppercase">LANGUAGE</h4>
+  
+          <div className="space-y-2 w-full">
+            <p className="text-sm text-gray-300">Malay - Native speaker.</p>
+            <p className="text-sm text-gray-300">English - Intermediate.</p>
+            <p className="text-sm text-gray-300">Japanese - Beginner.</p>
+           </div>
           </div>
 
           <div className="group relative bg-white/[0.02] border border-white/5 p-8 rounded-2xl transition-all hover:bg-green-500/[0.05] hover:border-green-500/30">
@@ -202,6 +211,14 @@ export default function Portfolio() {
                 <h2 className="text-xs font-mono text-blue-500 mb-2 tracking-[0.4em] uppercase">Notable Past Project</h2>
                 <h3 className="text-3xl font-bold">Featuring</h3>
             </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="group relative bg-slate-900/40 border border-white/10 rounded-2xl p-8 transition-all hover:border-blue-500/40">
+              <div className="absolute top-4 right-4 text-blue-500/20 group-hover:text-blue-500/40 transition-colors">
+                <ShieldCheck size={40} />
+              </div>
+              <h4 className="font-bold text-2xl mb-4 group-hover:text-blue-400 transition-colors">Product Authenticity Protocol</h4>
             <div className="hidden md:block text-right">
                 <p className="text-[10px] font-mono text-gray-600 uppercase">Hotel Room Management System</p>
                 <p className="text-[10px] font-mono text-gray-600 uppercase">Timeframe: During Highschool ( Guided by teachers. )</p>
@@ -216,17 +233,6 @@ export default function Portfolio() {
                 <p className="text-[10px] font-mono text-gray-600 uppercase">File Management System</p>
                 <p className="text-[10px] font-mono text-gray-600 uppercase">Timeframe: During Internship ( Together with fellow internship's friends. )</p>
             </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="group relative bg-slate-900/40 border border-white/10 rounded-2xl p-8 transition-all hover:border-blue-500/40">
-              <div className="absolute top-4 right-4 text-blue-500/20 group-hover:text-blue-500/40 transition-colors">
-                <ShieldCheck size={40} />
-              </div>
-              <h4 className="font-bold text-2xl mb-4 group-hover:text-blue-400 transition-colors">Product Authenticity Protocol</h4>
-              <p className="text-gray-400 text-sm mb-8 leading-relaxed">
-                A cryptographic hash-linked database system designed to prevent supply chain fraud through immutable digital verification.
-              </p>
             </div>
           </div>
         </div>
