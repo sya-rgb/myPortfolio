@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Mail, ExternalLink, User, Cpu, ShieldCheck, GraduationCap, Code2, ChevronRight, Activity, Globe, Zap } from 'lucide-react';
+import { Mail, Briefcase, ExternalLink, User, Cpu, ShieldCheck, GraduationCap, Code2, ChevronRight, Activity, Globe, Zap } from 'lucide-react';
 import { SiGithub, SiNextdotjs, SiTailwindcss, SiTypescript, SiPython, SiReact } from "react-icons/si";
 
 export default function Portfolio() {
