@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, ExternalLink, Award, BookOpen, Briefcase, User } from 'lucide-react';
+import { SiGithub } from "react-icons/si";
 
 export default function Portfolio() {
   return (
@@ -120,11 +121,14 @@ export default function Portfolio() {
       <footer className="py-20 px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
         <p className="text-gray-500 mb-8">Feel free to reach out for collaborations or inquiries.</p>
-        <div className="flex justify-center gap-6">
-          <a href="#" className="p-3 bg-gray-100 rounded-full hover:bg-blue-100 transition-colors text-gray-700 hover:text-blue-600"><Mail /></a>
-          <a href="#" className="p-3 bg-gray-100 rounded-full hover:bg-blue-100 transition-colors text-gray-700 hover:text-blue-600"><Github /></a>
-          <a href="#" className="p-3 bg-gray-100 rounded-full hover:bg-blue-100 transition-colors text-gray-700 hover:text-blue-600"><Linkedin /></a>
-        </div>
+<div className="flex justify-center gap-6">
+  <a href="#" className="p-3 bg-gray-100 rounded-full hover:bg-blue-100 transition-colors text-gray-700 hover:text-blue-600">
+    <Mail />
+  </a>
+  <a href="#" className="p-3 bg-gray-100 rounded-full hover:bg-blue-100 transition-colors text-gray-700 hover:text-blue-600">
+    <SiGithub size={24} /> 
+  </a>
+</div>
       </footer>
     </div>
   );
