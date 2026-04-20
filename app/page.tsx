@@ -70,14 +70,14 @@ export default function Portfolio() {
           <div className="relative w-20 h-20 md:w-24 md:h-24 bg-slate-900 rounded-full border border-blue-500/30 flex items-center justify-center overflow-hidden">
             {/* --- FRONT IMAGE START --- */}
             <img 
-              src="Gambar1.jpg" 
+              src="beh ngeri.png" 
               alt="Syamim Front" 
-              className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              className="opacity-60 contrast-125 group-hover:opacity-100 group-hover:contrast-100 transition-all"
             />
             {/* --- FRONT IMAGE END --- */}
           </div>
         </div>
-        <h1 className="text-xl md:text-2xl font-bold tracking-tight text-white uppercase">Muhammad Syamim Bin Syahidan</h1>
+      <h1 className="text-xl md:text-2xl font-bold tracking-tight text-white uppercase break-words px-4">Muhammad Syamim Bin Syahidan</h1>
         <div className="flex items-center gap-2 mt-2">
           <div className="h-[1px] w-8 bg-blue-500/50" />
           <p className="text-blue-400 font-mono text-[9px] tracking-[0.3em] uppercase">UiTM Student</p>
@@ -148,7 +148,7 @@ export default function Portfolio() {
             <div className="text-center md:text-left">
                 <h2 className="text-xs font-mono text-blue-500 mb-4 tracking-[0.4em] uppercase">ABOUT ME</h2>
                 <h3 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
-                    Engineering <span className="text-blue-500">Trust</span> through Cryptography.
+                    Engineering <span className="text-blue-500">Trust</span> through Action.
                 </h3>
                 <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl">
                   I am currently pursuing degree in Netcentric Computing at UiTM Shah Alam.
@@ -203,40 +203,53 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* --- SECTION: PROJECT REPOSITORY --- */}
-      <section id="projects" className="relative py-24 bg-white/[0.01] px-6 border-t border-white/5">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex justify-between items-end mb-12">
-            <div>
-                <h2 className="text-xs font-mono text-blue-500 mb-2 tracking-[0.4em] uppercase">Notable Past Project</h2>
-                <h3 className="text-3xl font-bold">Featuring</h3>
-            </div>
-          </div>
+{/* --- SECTION: PROJECT REPOSITORY --- */}
+<section id="projects" className="relative py-24 bg-white/[0.01] px-6 border-t border-white/5">
+  <div className="max-w-6xl mx-auto flex flex-col items-center">
+    
+    {/* --- Section Title (Centered) --- */}
+    <div className="text-center mb-12">
+      <h2 className="text-xs font-mono text-blue-500 mb-2 tracking-[0.4em] uppercase">Active Repositories</h2>
+      <h3 className="text-3xl font-bold">Featured Operations</h3>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="group relative bg-slate-900/40 border border-white/10 rounded-2xl p-8 transition-all hover:border-blue-500/40">
-              <div className="absolute top-4 right-4 text-blue-500/20 group-hover:text-blue-500/40 transition-colors">
-                <ShieldCheck size={40} />
-              </div>
-              <h4 className="font-bold text-2xl mb-4 group-hover:text-blue-400 transition-colors">Product Authenticity Protocol</h4>
-            <div className="hidden md:block text-right">
-                <p className="text-[10px] font-mono text-gray-600 uppercase">Hotel Room Management System</p>
-                <p className="text-[10px] font-mono text-gray-600 uppercase">Timeframe: During Highschool ( Guided by teachers. )</p>
-            </div>
-
-            <div className="hidden md:block text-right">
-                <p className="text-[10px] font-mono text-gray-600 uppercase">Library System</p>
-                <p className="text-[10px] font-mono text-gray-600 uppercase">Timeframe: During Diploma ( Together with 3 more team members. )</p>
-            </div>
-
-            <div className="hidden md:block text-right">
-                <p className="text-[10px] font-mono text-gray-600 uppercase">File Management System</p>
-                <p className="text-[10px] font-mono text-gray-600 uppercase">Timeframe: During Internship ( Together with fellow internship's friends. )</p>
-            </div>
-            </div>
-          </div>
+    {/* --- The Project Card (Centered) --- */}
+    <div className="group relative bg-slate-900/40 border border-white/10 rounded-2xl p-8 transition-all hover:border-blue-500/40 w-full max-w-4xl text-center flex flex-col items-center">
+      
+      {/* Icon: Updated pre-hover opacity & hover effect */}
+      <div className="text-blue-500/10 group-hover:text-blue-500/40 transition-colors mb-6">
+        <ShieldCheck size={40} />
+      </div>
+      
+      <h4 className="font-bold text-2xl mb-4 group-hover:text-blue-400 transition-colors">Product Authenticity Protocol</h4>
+      
+      {/* Description and Timeline (Full-width and Centered) */}
+      <p className="text-gray-400 text-sm mb-8 leading-relaxed max-w-2xl">
+        A cryptographic hash-linked database system designed to prevent supply chain fraud through immutable digital verification.
+      </p>
+      
+      {/* New: Structured Project Timelines */}
+      <div className="w-full text-left space-y-4 mb-8 text-xs font-mono text-gray-500 max-w-2xl border-t border-white/5 pt-6">
+        <div>
+          <p className="text-blue-400 uppercase">Hotel Room Management System</p>
+          <p>Timeframe: Highschool (Guided by teachers)</p>
         </div>
-      </section>
+        <div>
+          <p className="text-indigo-400 uppercase">Library System</p>
+          <p>Timeframe: Diploma (With 3 more team members)</p>
+        </div>
+        <div>
+          <p className="text-green-400 uppercase">File Management System</p>
+          <p>Timeframe: Internship (With fellow interns)</p>
+        </div>
+      </div>
+
+      <button className="flex items-center gap-3 text-xs font-mono tracking-widest text-blue-400 uppercase group-hover:gap-6 transition-all">
+        Access Data <ChevronRight size={14} />
+      </button>
+    </div>
+  </div>
+</section>
 
       {/* --- HUD DECORATION --- */}
       <div className="py-10 text-center opacity-20">
