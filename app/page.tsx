@@ -20,7 +20,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-            <span className="font-mono text-sm tracking-tighter text-blue-500 font-bold uppercase">System.Syamim</span>
+            <span className="font-mono text-sm tracking-tighter text-blue-500 font-bold uppercase">My Portfolio</span>
           </div>
           <div className="flex gap-4 md:gap-8 text-[10px] md:text-xs font-mono uppercase tracking-widest text-gray-500">
             {['About', 'Journey', 'Projects'].map((item) => (
@@ -43,43 +43,54 @@ export default function Portfolio() {
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 pointer-events-none" />
       </div>
 
-      {/* --- HERO / 3D SECURE ID CARD --- */}
-      <section className="relative pt-32 pb-16 px-4 flex flex-col items-center">
-        <div 
-          className="group perspective-1000 w-full max-w-[380px] md:max-w-md h-[240px] md:h-[260px] cursor-pointer"
-          onClick={() => setIsFlipped(!isFlipped)}
-        >
-          <div className={`relative w-full h-full transition-all duration-1000 preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
-            
-            {/* FRONT FACE: SECURE ACCESS */}
-            <div className="absolute inset-0 backface-hidden bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)]">
-              {/* Scanning line effect */}
-              <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
-                <div className="w-full h-[2px] bg-blue-500/50 shadow-[0_0_15px_blue] absolute top-0 animate-scan" />
-              </div>
-              
-              <div className="relative mb-4">
-                <div className="absolute -inset-2 bg-blue-500 rounded-full blur opacity-10 group-hover:opacity-30 transition-opacity" />
-                <div className="relative w-20 h-20 md:w-24 md:h-24 bg-slate-900 rounded-full border border-blue-500/30 flex items-center justify-center overflow-hidden">
-                  <User size={40} className="text-blue-400" />
-                </div>
-              </div>
-              
-              <h1 className="text-xl md:text-2xl font-bold tracking-tight text-white uppercase">Muhammad Syamim</h1>
-              <div className="flex items-center gap-2 mt-2">
-                <div className="h-[1px] w-8 bg-blue-500/50" />
-                <p className="text-blue-400 font-mono text-[9px] tracking-[0.3em] uppercase">Verified Personnel</p>
-                <div className="h-[1px] w-8 bg-blue-500/50" />
-              </div>
-              
-              <div className="mt-auto w-full flex justify-between items-end">
-                <div className="text-left">
-                  <p className="text-[8px] text-gray-500 font-mono">STATUS</p>
-                  <p className="text-[10px] text-green-400 font-mono animate-pulse">ACTIVE_UPLINK</p>
-                </div>
-                <p className="text-[9px] text-gray-500 font-mono">TAP FOR INTEL</p>
-              </div>
-            </div>
+{/* --- HERO / 3D SECURE ID CARD --- */}
+
+<section className="relative pt-32 pb-16 px-4 flex flex-col items-center">
+
+  <div 
+
+    className="group perspective-1000 w-full max-w-[380px] md:max-w-md h-[240px] md:h-[260px] cursor-pointer"
+
+    onClick={() => setIsFlipped(!isFlipped)}
+
+  >
+
+    <div className={`relative w-full h-full transition-all duration-1000 preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
+
+      
+
+      {/* FRONT FACE: SECURE ACCESS */}
+      <div className="absolute inset-0 backface-hidden bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-[0_0_50px_-12px_rgba(59,130,246,0.3)]">
+        {/* Scanning line effect */}
+        <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
+          <div className="w-full h-[2px] bg-blue-500/50 shadow-[0_0_15px_blue] absolute top-0 animate-scan" />
+        </div>
+        <div className="relative mb-4">
+          <div className="absolute -inset-2 bg-blue-500 rounded-full blur opacity-10 group-hover:opacity-30 transition-opacity" />
+          <div className="relative w-20 h-20 md:w-24 md:h-24 bg-slate-900 rounded-full border border-blue-500/30 flex items-center justify-center overflow-hidden">
+            {/* --- FRONT IMAGE START --- */}
+            <img 
+              src="Gambar1.jpg" 
+              alt="Syamim Front" 
+              className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            />
+            {/* --- FRONT IMAGE END --- */}
+          </div>
+        </div>
+        <h1 className="text-xl md:text-2xl font-bold tracking-tight text-white uppercase">Muhammad Syamim Bin Syahidan</h1>
+        <div className="flex items-center gap-2 mt-2">
+          <div className="h-[1px] w-8 bg-blue-500/50" />
+          <p className="text-blue-400 font-mono text-[9px] tracking-[0.3em] uppercase">UiTM Student</p>
+          <div className="h-[1px] w-8 bg-blue-500/50" />
+        </div>
+        <div className="mt-auto w-full flex justify-between items-end">
+          <div className="text-left">
+            <p className="text-[8px] text-gray-500 font-mono">STATUS</p>
+            <p className="text-[10px] text-green-400 font-mono animate-pulse">SINGLE</p>
+          </div>
+          <p className="text-[9px] text-gray-500 font-mono">TAP FOR MORE INFORMATION</p>
+        </div>
+      </div>
 
             {/* BACK FACE: DATA ENCRYPTION */}
             <div className="absolute inset-0 backface-hidden rotate-y-180 bg-slate-900/90 backdrop-blur-2xl border border-blue-500/40 rounded-2xl p-6 md:p-8 shadow-2xl">
@@ -88,24 +99,24 @@ export default function Portfolio() {
                   <Cpu className="text-blue-400" size={20} />
                 </div>
                 <div className="text-right">
-                  <p className="text-[8px] text-blue-400 font-mono">NODE_IDENTIFIER</p>
-                  <p className="text-[10px] font-bold tracking-widest text-white">SYAMIM-NC-2026</p>
+                  <p className="text-[8px] text-blue-400 font-mono">STUDENT ID</p>
+                  <p className="text-[10px] font-bold tracking-widest text-white">2025186799</p>
                 </div>
               </div>
               
               <div className="space-y-4 border-t border-white/5 pt-4">
                 <div className="group/item flex flex-col gap-1">
-                  <span className="text-[8px] text-gray-500 uppercase tracking-tighter">Secure Email</span>
+                  <span className="text-[8px] text-gray-500 uppercase tracking-tighter">Email</span>
                   <div className="flex items-center gap-2">
                     <Mail size={12} className="text-blue-400" />
-                    <span className="text-xs text-gray-200">syamim@example.com</span>
+                    <span className="text-xs text-gray-200">2025186799@student.uitm.edu.my</span>
                   </div>
                 </div>
                 <div className="group/item flex flex-col gap-1">
-                  <span className="text-[8px] text-gray-500 uppercase tracking-tighter">Terminal Uplink</span>
+                  <span className="text-[8px] text-gray-500 uppercase tracking-tighter">Phone Number</span>
                   <div className="flex items-center gap-2">
                     <Activity size={12} className="text-blue-400" />
-                    <span className="text-xs text-gray-200">+60 12-345 6789</span>
+                    <span className="text-xs text-gray-200">+60 19-497 1852</span>
                   </div>
                 </div>
               </div>
@@ -135,13 +146,14 @@ export default function Portfolio() {
                 <div className="w-[1px] h-full bg-blue-500/20" />
             </div>
             <div className="text-center md:text-left">
-                <h2 className="text-xs font-mono text-blue-500 mb-4 tracking-[0.4em] uppercase">Executive Summary</h2>
+                <h2 className="text-xs font-mono text-blue-500 mb-4 tracking-[0.4em] uppercase">ABOUT ME</h2>
                 <h3 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
                     Engineering <span className="text-blue-500">Trust</span> through Cryptography.
                 </h3>
                 <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl">
-                  I specialize in Netcentric Computing, focusing on the intersection of network security and decentralized architecture. 
-                  My mission is to build robust, tamper-proof digital environments using modern cryptographic protocols.
+                  I am currently pursuing degree in Netcentric Computing at UiTM Shah Alam.
+                  When I'm in highschool, my friend once brag about their uncles that work in tech stuff and earns a lot of money and that really piqued my interest.
+                  For my hobby, I would say that I enjoy doing nothing on my free time but I also enjoy reading novels and on that note, I like to daydreams a lot too.
                 </p>
             </div>
         </div>
@@ -153,20 +165,26 @@ export default function Portfolio() {
           
           <div className="group relative bg-white/[0.02] border border-white/5 p-8 rounded-2xl transition-all hover:bg-blue-500/[0.05] hover:border-blue-500/30">
             <GraduationCap className="text-blue-400 mb-6 group-hover:scale-110 transition-transform" />
-            <h4 className="font-mono text-xs text-blue-500 mb-2 tracking-widest uppercase">Academic.Log</h4>
-            <p className="text-sm text-gray-400 leading-relaxed">Focusing on cryptography and network infrastructure at university level.</p>
+            <h4 className="font-mono text-xs text-blue-500 mb-2 tracking-widest uppercase">Education Level</h4>
+            <p className="text-sm text-gray-400 leading-relaxed">UiTM Shah Alam ( 2024 - Present )</p>
+            <p className="text-sm text-gray-400 leading-relaxed">UiTM Machang ( 2021 - 2023 )</p>
           </div>
 
           <div className="group relative bg-white/[0.02] border border-white/5 p-8 rounded-2xl transition-all hover:bg-indigo-500/[0.05] hover:border-indigo-500/30">
             <Briefcase className="text-indigo-400 mb-6 group-hover:scale-110 transition-transform" />
-            <h4 className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">Experience.Data</h4>
-            <p className="text-sm text-gray-400 leading-relaxed">Analyzing real-world applications of full-stack engineering and cloud security.</p>
+            <h4 className="font-mono text-xs text-indigo-500 mb-2 tracking-widest uppercase">Language</h4>
+            <p className="text-sm text-gray-400 leading-relaxed">Malay - Native speaker.</p>
+            <p className="text-sm text-gray-400 leading-relaxed">English - Intermediate.</p>
+            <p className="text-sm text-gray-400 leading-relaxed">Japanese - Beginner.</p>
           </div>
 
           <div className="group relative bg-white/[0.02] border border-white/5 p-8 rounded-2xl transition-all hover:bg-green-500/[0.05] hover:border-green-500/30">
             <Zap className="text-green-400 mb-6 group-hover:scale-110 transition-transform" />
-            <h4 className="font-mono text-xs text-green-500 mb-2 tracking-widest uppercase">TechStack.Bin</h4>
+            <h4 className="font-mono text-xs text-green-500 mb-2 tracking-widest uppercase">Experience</h4>
             <div className="flex flex-wrap gap-2">
+            <p className="text-sm text-gray-400 leading-relaxed">Designing and developing responsive website using VS Code and language like CSS, JavaScript and HTML.</p>
+            <p className="text-sm text-gray-400 leading-relaxed">Developing database using MySQL and Oracle.</p>
+            <p className="text-sm text-gray-400 leading-relaxed">Doing penetration testing and network scanning regularly using NMAP, BurpSuit and SQLMap.</p>
                 {[SiNextdotjs, SiReact, SiTypescript, SiPython, SiTailwindcss].map((Icon, i) => (
                     <Icon key={i} className="text-gray-500 hover:text-white transition-colors" size={18} />
                 ))}
@@ -181,12 +199,22 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-end mb-12">
             <div>
-                <h2 className="text-xs font-mono text-blue-500 mb-2 tracking-[0.4em] uppercase">Active Repositories</h2>
-                <h3 className="text-3xl font-bold">Featured Operations</h3>
+                <h2 className="text-xs font-mono text-blue-500 mb-2 tracking-[0.4em] uppercase">Notable Past Project</h2>
+                <h3 className="text-3xl font-bold">Featuring</h3>
             </div>
             <div className="hidden md:block text-right">
-                <p className="text-[10px] font-mono text-gray-600 uppercase">Encryption_Level: RSA-4096</p>
-                <p className="text-[10px] font-mono text-gray-600 uppercase">Database_Type: Hash-Linked</p>
+                <p className="text-[10px] font-mono text-gray-600 uppercase">Hotel Room Management System</p>
+                <p className="text-[10px] font-mono text-gray-600 uppercase">Timeframe: During Highschool ( Guided by teachers. )</p>
+            </div>
+
+            <div className="hidden md:block text-right">
+                <p className="text-[10px] font-mono text-gray-600 uppercase">Library System</p>
+                <p className="text-[10px] font-mono text-gray-600 uppercase">Timeframe: During Diploma ( Together with 3 more team members. )</p>
+            </div>
+
+            <div className="hidden md:block text-right">
+                <p className="text-[10px] font-mono text-gray-600 uppercase">File Management System</p>
+                <p className="text-[10px] font-mono text-gray-600 uppercase">Timeframe: During Internship ( Together with fellow internship's friends. )</p>
             </div>
           </div>
 
@@ -199,9 +227,6 @@ export default function Portfolio() {
               <p className="text-gray-400 text-sm mb-8 leading-relaxed">
                 A cryptographic hash-linked database system designed to prevent supply chain fraud through immutable digital verification.
               </p>
-              <button className="flex items-center gap-3 text-xs font-mono tracking-widest text-blue-400 uppercase group-hover:gap-6 transition-all">
-                Access Data <ChevronRight size={14} />
-              </button>
             </div>
           </div>
         </div>
@@ -209,7 +234,7 @@ export default function Portfolio() {
 
       {/* --- HUD DECORATION --- */}
       <div className="py-10 text-center opacity-20">
-        <p className="text-[8px] font-mono tracking-[1em] uppercase">End of Transmission - 2026</p>
+        <p className="text-[8px] font-mono tracking-[1em] uppercase">Muhammad Syamim Bin Syahidan - 2026</p>
       </div>
 
     </div>
