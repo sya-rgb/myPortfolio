@@ -1,32 +1,41 @@
 import React from 'react';
-import { Mail, ExternalLink, Award, BookOpen, Briefcase, User } from 'lucide-react';
-import { SiGithub } from "react-icons/si";
+import { Mail, ExternalLink, Award, BookOpen, Briefcase, User, Cpu, ShieldCheck } from 'lucide-react';
+import { SiGithub} from "react-icons/si";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
+    <div className="min-h-screen bg-[#030712] text-gray-100 font-sans selection:bg-blue-500/30">
+      {/* --- FUTURISTIC BACKGROUND ELEMENTS --- */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full bg-blue-900/20 blur-[120px]" />
+        <div className="absolute top-[20%] -right-[10%] w-[30%] h-[50%] rounded-full bg-indigo-900/20 blur-[100px]" />
+      </div>
+
       {/* --- HERO / STUDENT CARD SECTION --- */}
-      <section className="pt-10 pb-16 px-4 flex justify-center bg-white border-b">
-        <div className="max-w-md w-full bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-xl overflow-hidden text-white transition-transform hover:scale-[1.02]">
+      <section className="relative pt-20 pb-16 px-4 flex justify-center">
+        <div className="max-w-md w-full bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden text-white transition-all hover:border-blue-500/50">
           <div className="p-8 flex flex-col items-center text-center">
-            <div className="w-24 h-24 bg-white rounded-full mb-4 border-4 border-blue-200 flex items-center justify-center overflow-hidden">
-              <User size={48} className="text-blue-600" />
+            <div className="relative group">
+               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+               <div className="relative w-28 h-28 bg-[#0f172a] rounded-full mb-4 border-2 border-white/10 flex items-center justify-center overflow-hidden">
+                 <User size={56} className="text-blue-400" />
+               </div>
             </div>
-            <h1 className="text-2xl font-bold tracking-tight">Full Name</h1>
-            <p className="text-blue-100 opacity-90 mb-6">Student Identification</p>
+            <h1 className="text-3xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+              Syamim
+            </h1>
+            <p className="text-blue-400 font-mono text-sm mt-1 mb-6 tracking-widest">NETCENTRIC COMPUTING STUDENT</p>
             
-            <div className="w-full space-y-3 pt-4 border-t border-blue-400/30 text-sm">
-              <div className="flex justify-between">
-                <span className="font-medium opacity-80">Major:</span>
-                <span>Computer Science</span>
+            <div className="w-full space-y-3 pt-6 border-t border-white/5 text-sm">
+              <div className="flex justify-between items-center">
+                <span className="font-medium text-gray-400">Specialization:</span>
+                <span className="text-blue-200">Network Security</span>
               </div>
-              <div className="flex justify-between">
-                <span className="font-medium opacity-80">Institution:</span>
-                <span>University Name</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="font-medium opacity-80">Status:</span>
-                <span className="bg-green-400/20 px-2 py-0.5 rounded text-green-100">Active</span>
+              <div className="flex justify-between items-center">
+                <span className="font-medium text-gray-400">Status:</span>
+                <span className="flex items-center gap-1.5 text-green-400">
+                  <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" /> Available
+                </span>
               </div>
             </div>
           </div>
@@ -34,101 +43,71 @@ export default function Portfolio() {
       </section>
 
       {/* --- SECTION 1: ABOUT ME --- */}
-      <section id="about" className="py-20 px-6 max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-          <User className="text-blue-600" /> About Me
-        </h2>
-        <p className="text-lg text-gray-600 leading-relaxed">
-          I am a passionate student focused on bridging the gap between technology and user experience. 
-          With a strong foundation in problem-solving and a drive for continuous learning, 
-          I aim to create digital solutions that are both functional and impactful.
-        </p>
-      </section>
-
-      {/* --- SECTION 2: EDUCATION, SKILLS & WORK --- */}
-      <section className="py-20 bg-gray-100 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
-          <div>
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-2"><BookOpen size={20} /> Education</h3>
-            <div className="border-l-2 border-blue-600 pl-4 space-y-6">
-              <div>
-                <p className="font-bold">BSc in Computer Science</p>
-                <p className="text-sm text-gray-500">2022 - Present</p>
-              </div>
+      <section id="about" className="relative py-20 px-6 max-w-4xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="bg-blue-600/10 p-4 rounded-2xl border border-blue-500/20">
+                <Cpu className="text-blue-400" size={32} />
             </div>
-          </div>
-          
-          <div>
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-2"><Briefcase size={20} /> Work Experience</h3>
-            <div className="border-l-2 border-gray-300 pl-4 space-y-6">
-              <div>
-                <p className="font-bold">Intern Developer</p>
-                <p className="text-sm text-gray-500">Tech Solutions Inc. | 2024</p>
-              </div>
+            <div>
+                <h2 className="text-3xl font-bold mb-6 text-white">System Architecture</h2>
+                <p className="text-lg text-gray-400 leading-relaxed">
+                  Third-year Netcentric Computing student specializing in cryptographic verification and network infrastructure. 
+                  Currently developing hash-linked database solutions to solve product authenticity challenges.
+                </p>
             </div>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-bold mb-6">Technical Skills</h3>
-            <div className="flex flex-wrap gap-2">
-              {['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Python'].map(skill => (
-                <span key={skill} className="bg-white px-3 py-1 rounded-full shadow-sm text-sm font-medium">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* --- SECTION 3: ACADEMIC SHOWCASE --- */}
-      <section className="py-20 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10">Academic Projects</h2>
-        <div className="grid sm:grid-cols-2 gap-8">
-          <div className="group bg-white border rounded-xl overflow-hidden transition-all hover:shadow-lg">
-            <div className="h-48 bg-gray-200 group-hover:bg-gray-300 transition-colors" />
-            <div className="p-6">
-              <h4 className="font-bold text-xl mb-2">Algorithm Optimization Project</h4>
-              <p className="text-gray-600 text-sm mb-4">A study on improving search efficiency within large datasets using Python.</p>
-              <button className="flex items-center gap-1 text-blue-600 font-medium hover:underline">
-                View Repository <ExternalLink size={14} />
+      {/* --- SECTION 2: ACADEMIC PROJECTS (More Responsive Grid) --- */}
+      <section className="relative py-20 bg-white/[0.02] px-6 border-y border-white/5">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-10 flex items-center gap-3">
+            <ShieldCheck className="text-blue-500" /> Security Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Project 1 */}
+            <div className="group bg-white/5 border border-white/10 rounded-2xl p-6 transition-all hover:bg-white/10 hover:-translate-y-2">
+              <div className="h-40 bg-[#0f172a] rounded-xl mb-4 flex items-center justify-center border border-white/5 overflow-hidden">
+                <div className="text-blue-500/20 font-mono text-xs p-4">
+                  01001000 01000001 01010011 01001000
+                </div>
+              </div>
+              <h4 className="font-bold text-xl mb-2 text-white">Cryptographic Verification</h4>
+              <p className="text-gray-400 text-sm mb-6">Product authenticity verification system using a hash-linked database protocol.</p>
+              <button className="flex items-center gap-2 text-blue-400 text-sm font-semibold group-hover:text-blue-300">
+                View Repository <ExternalLink size={16} />
+              </button>
+            </div>
+
+            {/* Project 2 (Example) */}
+            <div className="group bg-white/5 border border-white/10 rounded-2xl p-6 transition-all hover:bg-white/10 hover:-translate-y-2">
+              <div className="h-40 bg-[#0f172a] rounded-xl mb-4 flex items-center justify-center border border-white/5">
+                <Cpu className="text-blue-500/20" size={64} />
+              </div>
+              <h4 className="font-bold text-xl mb-2 text-white">Smart Waste IoT</h4>
+              <p className="text-gray-400 text-sm mb-6">Automated waste management using RFID authentication and conveyor mechanics.</p>
+              <button className="flex items-center gap-2 text-blue-400 text-sm font-semibold group-hover:text-blue-300">
+                View Repository <ExternalLink size={16} />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* --- SECTION 4: CERTIFICATES & AWARDS --- */}
-      <section className="py-20 bg-blue-600 text-white px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12 flex items-center justify-center gap-2">
-            <Award /> Recognition
-          </h2>
-          <div className="grid sm:grid-cols-3 gap-6">
-            <div className="p-6 bg-white/10 rounded-lg backdrop-blur-sm">
-              <p className="font-bold">Dean's List 2024</p>
-              <p className="text-sm opacity-80">Academic Excellence Award</p>
-            </div>
-            <div className="p-6 bg-white/10 rounded-lg backdrop-blur-sm">
-              <p className="font-bold">AWS Certified</p>
-              <p className="text-sm opacity-80">Cloud Practitioner</p>
-            </div>
-          </div>
+      {/* --- FOOTER: CONTACT INFO --- */}
+      <footer className="relative py-20 px-6 text-center">
+        <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+            Let's Connect
+        </h2>
+        <p className="text-gray-500 mb-10 max-w-md mx-auto">Available for networking and security-focused collaborations.</p>
+        <div className="flex justify-center gap-4">
+          <a href="mailto:your-email@example.com" className="p-4 bg-white/5 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all hover:bg-blue-500/10">
+            <Mail className="text-blue-400" />
+          </a>
+          <a href="#" className="p-4 bg-white/5 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all hover:bg-blue-500/10">
+            <SiGithub size={24} className="text-white" />
+          </a>
         </div>
-      </section>
-
-      {/* --- SECTION 5: CONTACT INFO --- */}
-      <footer className="py-20 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-        <p className="text-gray-500 mb-8">Feel free to reach out for collaborations or inquiries.</p>
-<div className="flex justify-center gap-6">
-  <a href="#" className="p-3 bg-gray-100 rounded-full hover:bg-blue-100 transition-colors text-gray-700 hover:text-blue-600">
-    <Mail />
-  </a>
-  <a href="#" className="p-3 bg-gray-100 rounded-full hover:bg-blue-100 transition-colors text-gray-700 hover:text-blue-600">
-    <SiGithub size={24} /> 
-  </a>
-</div>
       </footer>
     </div>
   );
